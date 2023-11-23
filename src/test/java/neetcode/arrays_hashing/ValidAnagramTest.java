@@ -6,16 +6,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ValidAnagramTest {
 
+    private final ValidAnagram solution = new ValidAnagram();
+
     @Test
     void example1() {
-        var validAnagram = new ValidAnagram();
-        assertThat(validAnagram.solution.isAnagram("anagram", "nagaram")).isEqualTo(true);
+        assertThat(solution.isAnagram("anagram", "nagaram")).isEqualTo(true);
     }
 
     @Test
     void example2() {
-        var validAnagram = new ValidAnagram();
-        assertThat(validAnagram.solution.isAnagram("rat", "car")).isEqualTo(false);
+        assertThat(solution.isAnagram("rat", "car")).isEqualTo(false);
     }
 
 }

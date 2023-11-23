@@ -12,8 +12,7 @@ class GroupAnagramTest {
 
     @Test
     void example1() {
-        GroupAnagram groupAnagram = new GroupAnagram();
-        GroupAnagram.Solution solution = groupAnagram.new Solution();
+        var solution = new GroupAnagram();
 
         String[] input = {"eat", "tea", "tan", "ate", "nat", "bat"};
         List<List<String>> expected = Arrays.asList(
