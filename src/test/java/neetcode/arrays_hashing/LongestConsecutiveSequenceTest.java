@@ -19,4 +19,19 @@ class LongestConsecutiveSequenceTest {
         assertThat(solution.longestConsecutive(nums)).isEqualTo(9);
     }
 
+    @Test
+    void example3_corner_case1_empty() {
+        var nums = new int[]{};
+        var solution = new LongestConsecutiveSequence();
+        assertThat(solution.longestConsecutive(nums)).isEqualTo(0);
+    }
+
+    @Test
+    void example4_corner_case2_0() {
+        var nums = new int[]{0};
+        var solution = new LongestConsecutiveSequence();
+        assertThat(solution.longestConsecutive(nums)).isEqualTo(1);
+    }
+
+
 }
