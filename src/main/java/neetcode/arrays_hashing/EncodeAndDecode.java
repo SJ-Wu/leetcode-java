@@ -1,5 +1,6 @@
 package neetcode.arrays_hashing;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EncodeAndDecode {
@@ -12,11 +13,22 @@ public class EncodeAndDecode {
     }
 
     public String encode(List<String> strs) {
-        return "";
+        var result = new StringBuilder();
+        for (String s : strs) {
+            result.append(s.length()).append("#").append(s);
+        }
+        return result.toString();
     }
 
     // Decodes a single string to a list of strings.
     public List<String> decode(String s) {
-        return List.of();
-    }
-}
+        List<String> result = new ArrayList<>();
+        var i = 0;
+        while (i < s.length()) {
+            var j = i;
+            while (s.charAt(j) != '#') j++;
+            i = j + 1 + Integer.parseInt(s.substring(i, j));
+            result.add(s.substring(j + 1, i));
+        }
+        return result;
+    }}
