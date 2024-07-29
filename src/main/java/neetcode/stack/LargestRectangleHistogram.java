@@ -3,6 +3,10 @@ package neetcode.stack;
 import java.util.Stack;
 
 public class LargestRectangleHistogram {
+
+    private record Histogram(int index, int height) {
+    }
+
     public int largestRectangleArea(int[] heights) {
         var maxArea = 0;
         var stack = new Stack<Histogram>();
@@ -20,7 +24,6 @@ public class LargestRectangleHistogram {
         }
         return maxArea;
     }
+
 }
 
-record Histogram(int index, int height) {
-}
